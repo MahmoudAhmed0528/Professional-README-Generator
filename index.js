@@ -16,13 +16,13 @@ const questions = [
   },
   {
     type: "input",
-    name: "usage",
-    message: "How to use the app?",
+    name: "installation",
+    message: "How to install the app?",
   },
   {
     type: "input",
-    name: "installation",
-    message: "How to install the app?",
+    name: "usage",
+    message: "How to use the app?",
   },
   {
     type: "input",
@@ -44,11 +44,11 @@ function generateReadme(answers) {
 ## Description
 ${answers.description}
 
-## Usage
-${answers.usage}
-
 ## Installation
 ${answers.installation}
+
+## Usage
+${answers.usage}
 
 ## How to report issues?
 ${answers.issues}
