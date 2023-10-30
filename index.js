@@ -12,27 +12,37 @@ const questions = [
   {
     type: "input",
     name: "description",
-    message: "What the app is for?",
+    message: "What the app does?",
   },
   {
     type: "input",
     name: "installation",
-    message: "How to install the app?",
+    message: "How to install the project?",
   },
   {
     type: "input",
     name: "usage",
-    message: "How to use the app?",
-  },
-  {
-    type: "input",
-    name: "issues",
-    message: "How to report issues?",
+    message: "How to use the project?",
   },
   {
     type: "input",
     name: "contributions",
     message: "How to make contributions?",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "What is the testing process for your project?",
+  },
+  {
+    type: "input",
+    name: "licenseName",
+    message: "What is the license name?",
+  },
+  {
+    type: "input",
+    name: "questions",
+    message: "What is your contact info?",
   },
 ];
 
@@ -40,6 +50,16 @@ const questions = [
 function generateReadme(answers) {
   return `
 # ${answers.title}
+
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributions](#contributions)
+- [Testing Process](#testing-process)
+- [License](#license)
+- [Questions](#questions)
 
 ## Description
 ${answers.description}
@@ -50,11 +70,18 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
-## How to report issues?
-${answers.issues}
-
-## How to make contributions?
+## Contributions
 ${answers.contributions}
+
+## Testing process
+${answers.tests}
+
+## License
+${"This project is licensed under the"} ${[answers.licenseName]}
+
+## Questions
+${answers.questions}
+
 `;
 }
 
